@@ -1,5 +1,6 @@
 package com.ui.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +17,6 @@ public class HomePage extends WebdriverInitialization{
 	public WebElement practiceTab;
 	
 	 public HomePage(){
-		 super();
 		 PageFactory.initElements(driver, this);
 	 }
 	 
@@ -24,8 +24,9 @@ public class HomePage extends WebdriverInitialization{
 		 return rsLogo.isDisplayed();
 	 }
 	 
-	 public void clickPracticePage(){
+	 public CaptureDetailsPage clickPracticePage(){
 		practiceTab.click();
+		return new CaptureDetailsPage();
 	 }
 
 }
