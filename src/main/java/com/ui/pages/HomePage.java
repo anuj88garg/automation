@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.framework.configuration.WebdriverInitialization;
 
-public class HomePage extends WebdriverInitialization{
+public class HomePage {
 	
 	
 	@FindBy(xpath="//a/img[@src='assets/images/rs_logo.png'][1]")
@@ -17,7 +17,7 @@ public class HomePage extends WebdriverInitialization{
 	public WebElement practiceTab;
 	
 	 public HomePage(){
-		 PageFactory.initElements(driver, this);
+		 PageFactory.initElements(WebdriverInitialization.driver, this);
 	 }
 	 
 	 public boolean LogoVisible(){

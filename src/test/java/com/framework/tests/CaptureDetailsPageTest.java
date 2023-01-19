@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.framework.common.WebpageCommomOperation;
+import com.framework.common.WebpageCommonOperation;
 import com.framework.configuration.WebdriverInitialization;
 import com.framewrok.testUtils.ReadExcelUtility;
 import com.ui.pages.CaptureDetailsPage;
@@ -18,7 +18,7 @@ public class CaptureDetailsPageTest extends WebdriverInitialization{
 	CaptureDetailsPage cd;
 	HomePage hp;
 	int i = 0;
-	WebpageCommomOperation op = new WebpageCommomOperation();
+	WebpageCommonOperation op = new WebpageCommonOperation();
 
 	
 	@BeforeMethod

@@ -6,20 +6,21 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.framework.configuration.WebdriverInitialization;
 
-public class ShopifyCatalogPage extends WebdriverInitialization{
+public class ShopifyCatalogPage {
 	
 	
 	public ShopifyCatalogPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(WebdriverInitialization.driver, this);
 	}
 
 
-	@FindBy(xpath="//a[contains(text(),'Floral White Top')]")
-	public WebElement itemFloralWhiteTop;
+	@FindBy(xpath="//a[contains(text(),'Chequered Red Shirt')]")
+	public WebElement itemRedChequeredTShirt;
+	
 
 	
 	public ShopifyCheckoutPage clickItemFloralWhiteTop() {
-		itemFloralWhiteTop.click();
+		itemRedChequeredTShirt.click();
 		return new ShopifyCheckoutPage();
 	}
 	

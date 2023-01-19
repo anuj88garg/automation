@@ -7,13 +7,13 @@
  <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.1.2</version>
+    <version>4.7.2</version>
 </dependency>
 
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-chrome-driver</artifactId>
-    <version>4.1.2</version>
+    <version>4.7.2</version>
 </dependency>
 
 <dependency>
@@ -41,6 +41,46 @@
     <artifactId>poi-ooxml</artifactId>
     <version>5.2.2</version>
 </dependency>
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>4.5.1</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>json-schema-validator</artifactId>
+    <version>4.5.1</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>json-path</artifactId>
+    <version>4.5.1</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured-all</artifactId>
+    <version>4.5.1</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured-common</artifactId>
+    <version>4.5.1</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20220320</version>
+</dependency>
+<dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-devtools-v108</artifactId>
+    <version>4.7.2</version>
+</dependency>
 </dependencies>
 
 <build>
@@ -55,6 +95,15 @@
 		          </suiteXmlFiles>
 		          </configuration>
              </plugin>
+             <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <version>3.1</version>
+		        <configuration>
+		          <source>1.8</source>
+		          <target>1.8</target>
+		        </configuration>
+      		</plugin>
      </plugins>
 </build>
 </project>

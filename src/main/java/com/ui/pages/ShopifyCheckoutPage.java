@@ -6,15 +6,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.framework.configuration.WebdriverInitialization;
 
-public class ShopifyCheckoutPage extends WebdriverInitialization{
+public class ShopifyCheckoutPage {
 	
 	
 	public ShopifyCheckoutPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(WebdriverInitialization.driver, this);
 	}
 
 
-	@FindBy(id="simpl_checkout-product_div")
+	@FindBy(id="simpl_checkout-product_button")
 	public WebElement buyNowWithSimpl;
 
 	

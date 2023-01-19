@@ -3,14 +3,14 @@ package com.framework.tests;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import com.framework.common.WebpageCommomOperation;
+import com.framework.common.WebpageCommonOperation;
 import com.framework.configuration.WebdriverInitialization;
 import com.ui.pages.HomePage;
 
 public class HomePageTest extends WebdriverInitialization{
 	
 	HomePage home;
-	WebpageCommomOperation op = new WebpageCommomOperation();
+	WebpageCommonOperation op = new WebpageCommonOperation();
 	
 	@BeforeMethod
 	public void setup() {

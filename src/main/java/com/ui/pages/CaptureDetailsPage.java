@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.framework.configuration.WebdriverInitialization;
 
-public class CaptureDetailsPage extends WebdriverInitialization{
+public class CaptureDetailsPage {
 
 	@FindBy(id="name")
 	@CacheLookup
@@ -26,7 +26,7 @@ public class CaptureDetailsPage extends WebdriverInitialization{
 	public WebElement submit;
 	
 	public CaptureDetailsPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(WebdriverInitialization.driver, this);
 	}
 	
 	public void enterName(String fullName) {
