@@ -12,9 +12,10 @@ import com.ui.pages.ShopifyCatalogPage;
 import com.ui.pages.ShopifyCheckoutPage;
 import com.ui.pages.ShopifyHomePage;
 import com.ui.pages.ShopifyLoginPage2;
+import com.ui.pages.SimplCheckoutPage;
 import com.ui.pages.SimplLoginPage;
 
-public class SimpLoginPageTest extends WebdriverInitialization{
+public class SimplCheckoutPageTest extends WebdriverInitialization{
 
 	ShopifyLoginPage2 slp;
 	ShopifyHomePage shp;
@@ -22,9 +23,10 @@ public class SimpLoginPageTest extends WebdriverInitialization{
 	ShopifyCatalogPage scp;
 	ShopifyCheckoutPage sCheckout;
 	SimplLoginPage simplLogin;
+	SimplCheckoutPage simplCheckout;
 	
 	@BeforeClass
-	public void setup(){
+	public void setup() throws IOException{
 		op = new WebpageCommonOperation();
 		slp = new ShopifyLoginPage2();
 		op.openApplication("https://testing-simpl.myshopify.com");
@@ -33,34 +35,13 @@ public class SimpLoginPageTest extends WebdriverInitialization{
 		sCheckout = scp.clickItemFloralWhiteTop();
 		simplLogin = sCheckout.clickBuyNowWithSimpl();
 		op.switchToFrame("simpl-checkout-iframe");
-		
+		simplCheckout = simplLogin.loginToSimpl("8904085621");
 	}
 	
 	@Test()
-	public void verifySimplLoginWorking() throws IOException {
-		simplLogin.loginToSimpl("8904085621");
+	public void placeOrderByPayLater(){
+		simplCheckout.clickPayLater();
 		
 	}
 	
-	
-//	public void verifyApplyCoupons() {
-//		try {
-//			Thread.sleep(20000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		simplLogin.enterCoupon("MONSOON10");
-//	}
-	
-	
-	public void zverifyOTPIsGettingEntered() {
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		//simplLogin.enterOTP("9011624625");
-	}
 }

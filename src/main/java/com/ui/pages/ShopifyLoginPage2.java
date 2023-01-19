@@ -6,11 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.framework.configuration.WebdriverInitialization;
 
-public class ShopifyLoginPage2 extends WebdriverInitialization{
+public class ShopifyLoginPage2 {
 	
 	
 	public ShopifyLoginPage2() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(WebdriverInitialization.driver, this);
 	}
 
 
